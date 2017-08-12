@@ -1,13 +1,13 @@
-<div class="container">
-  <div class="text-center">
-    <h1> Liste des restaurants</h1>
-  </div>
-  <div>
-    <% @restaurants.each do |restaurant| %>
-      <%= restaurant.name %>
-      <%= restaurant.address %>
-      <%= restaurant.phone_number %>
+<div class="text-center">
+  <h1> Liste des restaurants</h1>
+</div>
 
+<div class="container">
+  <div class="row">
+    <%= @restaurants.each do |restaurant|%>
+      <div class="col-xs-12 col-sm-4">
+        <%= render "restaurant_card", restaurant: restaurant %>
+      </div>
     <% end %>
   </div>
 </div>
